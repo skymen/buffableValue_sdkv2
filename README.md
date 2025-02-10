@@ -1,9 +1,9 @@
-<img src="./src/icon.svg" width="100" /><br>
+<img src="./examples/cover.webp" width="150" /><br>
 # Buffable Value
 <i>Description</i> <br>
-### Version 2.0.0.1
+### Version 2.0.0.2
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/buffableValue_sdkv2/releases/download/skymen_buffed_value-2.0.0.1.c3addon/skymen_buffed_value-2.0.0.1.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/buffableValue_sdkv2/releases/download/skymen_buffed_value-2.0.0.2.c3addon/skymen_buffed_value-2.0.0.2.c3addon)
 <br>
 <sub> [See all releases](https://github.com/skymen/buffableValue_sdkv2/releases) </sub> <br>
 
@@ -35,6 +35,8 @@ npm run dev
 ```
 
 ## Examples Files
+| Description | Download |
+| --- | --- |
 
 ---
 ## Properties
