@@ -11,8 +11,9 @@ export const id = "skymen_buffed_value";
 export const name = "Buffable Value";
 export const version = _version;
 export const author = "skymen";
-export const website = "https://www.construct.net";
-export const documentation = "https://www.construct.net";
+export const website = "https://github.com/skymen/buffableValue_sdkv2";
+export const documentation =
+  "https://www.construct.net/en/make-games/addons/1129/buffable-value/documentation";
 export const description = "Description";
 export const category = ADDON_CATEGORY.GENERAL;
 
