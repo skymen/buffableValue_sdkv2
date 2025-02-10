@@ -140,5 +140,7 @@ export const properties = [
       initialValue: "after",
       items: [{ after: "Clamp After Buffs" }, { before: "Clamp Before Buffs" }],
     },
+    name: "Clamp Mode",
+    desc: "Clamp Mode",
   },
 ];
