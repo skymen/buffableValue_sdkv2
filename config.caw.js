@@ -5,10 +5,10 @@ import {
   PROPERTY_TYPE,
 } from "./template/enums.js";
 import _version from "./version.js";
-export const addonType = ADDON_TYPE.PLUGIN;
+export const addonType = ADDON_TYPE.BEHAVIOR;
 export const type = PLUGIN_TYPE.OBJECT;
-export const id = "sample_addon";
-export const name = "Sample Addon";
+export const id = "skymen_buffed_value";
+export const name = "Buffable Value";
 export const version = _version;
 export const author = "skymen";
 export const website = "https://www.construct.net";
@@ -23,7 +23,10 @@ export const files = {
 };
 
 // categories that are not filled will use the folder name
-export const aceCategories = {};
+export const aceCategories = {
+  general: "General",
+  buffs: "Buffs",
+};
 
 export const info = {
   // icon: "icon.svg",
@@ -100,4 +103,42 @@ export const properties = [
     desc: "Property Description",
   }
   */
+  {
+    type: "float",
+    id: "buffedValue",
+    options: {
+      initialValue: 100,
+      interpolatable: false,
+    },
+    name: "Value",
+    desc: "Value",
+  },
+  {
+    type: "float",
+    id: "buffedValueMax",
+    options: {
+      initialValue: 100,
+      interpolatable: false,
+    },
+    name: "Max",
+    desc: "Max",
+  },
+  {
+    type: "float",
+    id: "buffedValueMin",
+    options: {
+      initialValue: 0,
+      interpolatable: false,
+    },
+    name: "Min",
+    desc: "Min",
+  },
+  {
+    type: "combo",
+    id: "clampMode",
+    options: {
+      initialValue: "after",
+      items: [{ after: "Clamp After Buffs" }, { before: "Clamp Before Buffs" }],
+    },
+  },
 ];
