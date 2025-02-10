@@ -10,12 +10,16 @@ const valueParam = {
   initialValue: "0",
 };
 
-const buffIdParam = {
+const buffIdExprParam = {
   id: "buffId",
-  autoCompleteId: "buffId",
   name: "Buff ID",
   desc: "Buff ID",
   type: "string",
+};
+
+const buffIdParam = {
+  ...buffIdExprParam,
+  autocompleteId: "buffId",
   initialValue: "",
 };
 
@@ -564,7 +568,7 @@ expression(
     deprecated: false,
     returnType: "number",
     description: "Time",
-    params: [buffIdParam],
+    params: [buffIdExprParam],
   },
   function (tag) {
     const buff = this.percentBuffs[tag] || this.fixedBuffs[tag];
@@ -584,7 +588,7 @@ expression(
     deprecated: false,
     returnType: "number",
     description: "Value",
-    params: [buffIdParam],
+    params: [buffIdExprParam],
   },
   function (tag) {
     const buff = this.fixedBuffs[tag];
@@ -604,7 +608,7 @@ expression(
     deprecated: false,
     returnType: "number",
     description: "Value",
-    params: [buffIdParam],
+    params: [buffIdExprParam],
   },
   function (tag) {
     const buff = this.percentBuffs[tag];
@@ -624,7 +628,7 @@ expression(
     deprecated: false,
     returnType: "number",
     description: "Progress",
-    params: [buffIdParam],
+    params: [buffIdExprParam],
   },
   function (tag) {
     const buff = this.percentBuffs[tag] || this.fixedBuffs[tag];
@@ -645,7 +649,7 @@ expression(
     deprecated: false,
     returnType: "number",
     description: "Duration",
-    params: [buffIdParam],
+    params: [buffIdExprParam],
   },
   function (tag) {
     const buff = this.percentBuffs[tag] || this.fixedBuffs[tag];

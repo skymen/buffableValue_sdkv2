@@ -1,11 +1,11 @@
-<img src="./src/icon.svg?rand=8697" width="100" /><br>
-# Sample Addon
+<img src="./src/icon.svg" width="100" /><br>
+# Buffable Value
 <i>Description</i> <br>
-### Version 1.0.0.0
+### Version 2.0.0.1
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/ConstructFund/construct-addon-wizard-scaffold/releases/download/sample_addon-1.0.0.0.c3addon/sample_addon-1.0.0.0.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/buffableValue_sdkv2/releases/download/skymen_buffed_value-2.0.0.1.c3addon/skymen_buffed_value-2.0.0.1.c3addon)
 <br>
-<sub> [See all releases](https://github.com/ConstructFund/construct-addon-wizard-scaffold/releases) </sub> <br>
+<sub> [See all releases](https://github.com/skymen/buffableValue_sdkv2/releases) </sub> <br>
 
 ---
 <b><u>Author:</u></b> skymen <br>
@@ -40,32 +40,57 @@ npm run dev
 ## Properties
 | Property Name | Description | Type |
 | --- | --- | --- |
+| Value | Value | float |
+| Max | Max | float |
+| Min | Min | float |
+| Clamp Mode | Clamp Mode | combo |
 
 
 ---
 ## Actions
 | Action | Description | Params
 | --- | --- | --- |
-| Sample Action | This is a sample action | Param1             *(string)* <br> |
-| Sample Action Async | This is a sample action |  |
-| Sample Action Combo | This is a sample action | Param1             *(combo)* <br> |
-| Sample Action | This is a sample action | Param1             *(string)* <br> |
+| Apply fixed buff | Apply fixed buff | Buff ID             *(string)* <br>Value             *(number)* <br>Duration             *(number)* <br> |
+| Apply buff | Apply buff | Buff ID             *(string)* <br>Value             *(number)* <br>Duration             *(number)* <br> |
+| Stop all buffs | Stop all buffs |  |
+| Stop buff | Stop buff | Buff ID             *(string)* <br> |
+| Set max | Set max | Value             *(number)* <br> |
+| Set min | Set min | Value             *(number)* <br> |
+| Set value | Set value | Value             *(number)* <br> |
 
 
 ---
 ## Conditions
 | Condition | Description | Params
 | --- | --- | --- |
-| Sample Condition | This is a sample condition | Param1 *(string)* <br> |
-| Sample Trigger | This is a sample trigger |  |
-| Sample Condition | This is a sample condition | Param1 *(combo)* <br> |
-| Sample Condition | This is a sample condition |  |
+| For each buff | For each buff |  |
+| For each percent buff | For each percent buff |  |
+| For each static buff | For each static buff |  |
+| Has any buff | Has any buff |  |
+| Has buff | Has buff | Buff ID *(string)* <br> |
+| On any buff ended | On any buff ended |  |
+| On any buff started | On any buff started |  |
+| On buff ended | On buff ended | Buff ID *(string)* <br> |
+| On buff started | On buff started | Buff ID *(string)* <br> |
+| Is at max | Is at max |  |
+| Is at min | Is at min |  |
 
 
 ---
 ## Expressions
 | Expression | Description | Return Type | Params
 | --- | --- | --- | --- |
-| Expression | Sample Expression | number |  | 
-| Expression2 | Sample Expression | string |  | 
-| SampleExpression | This is a sample expression | string |  | 
+| AllFixedBuffs | All fixed buffs accumulated | number |  | 
+| AllPercentBuffs | All percent buffs accumulated | number |  | 
+| BaseValue | Base value with no buffs | number |  | 
+| BuffCount | Buff count | number |  | 
+| BuffDuration | Duration | number | Buff ID *(string)* <br> | 
+| BuffProgress | Progress | number | Buff ID *(string)* <br> | 
+| BuffTime | Time | number | Buff ID *(string)* <br> | 
+| FixedBuffValue | Value | number | Buff ID *(string)* <br> | 
+| LastBuff | Last buff | number |  | 
+| Max | Max | number |  | 
+| Min | Min | number |  | 
+| PercentBuffValue | Value | number | Buff ID *(string)* <br> | 
+| RawValue | Raw value with all buffs applied but no min/max clamping | number |  | 
+| Value | Value with all buffs applied | number |  | 
