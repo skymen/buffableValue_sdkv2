@@ -425,8 +425,8 @@ expression(
   },
   function () {
     return this.clampMode === 0
-      ? this.clamp(this._RawValue(), this.minValue, this.maxValue)
-      : this._RawValue();
+      ? this.clamp(this.RawValue(), this.minValue, this.maxValue)
+      : this.RawValue();
   },
   true
 );
@@ -460,8 +460,8 @@ expression(
   function () {
     return (
       this.baseValue +
-      (this.baseValue * this._AllPercentBuffs()) / 100 +
-      this._AllFixedBuffs()
+      (this.baseValue * this.AllPercentBuffs()) / 100 +
+      this.AllFixedBuffs()
     );
   },
   true
